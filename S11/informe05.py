@@ -25,16 +25,20 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 
+
+
+#SET 1
+
 # Gráfica Resistencia
 
-ds = pd.read_csv('https://raw.githubusercontent.com/jjavierf64/Proyectos_Instrumentacion/main/S07/datos_22_03_22_14_30.csv')
+ds = pd.read_csv('https://raw.githubusercontent.com/jjavierf64/Proyectos_Instrumentacion/main/S11/datos_1.csv')
 
 print(ds.tail())
 
 ds = ds.set_index('ts')
 
 plt.plot(ds.ro)
-plt.title('Medida del valor de la resistencia del termoresistor.')
+plt.title('Medida del valor de la resistencia del termoresistor. (Primer Set)')
 plt.ylabel('Resitencia (Ohms)')
 plt.xlabel('Tiempo (s)')
 plt.show()
@@ -42,17 +46,61 @@ plt.show()
 # Gráfica de Temperatura
 
 plt.plot(ds.tk)
-plt.title('Medida de la temperatura definida por el termoresistor.')
+plt.title('Medida de la temperatura definida por el termoresistor. (Primer Set)')
 plt.ylabel('Temperatura (K)')
 plt.xlabel('Tiempo (s)')
 plt.show()
 
-# Ambos Datos
+
+
+
+#SET 2
+
+# Gráfica Resistencia
+
+ds = pd.read_csv('https://raw.githubusercontent.com/jjavierf64/Proyectos_Instrumentacion/main/S11/datos_2.csv')
+
+print(ds.tail())
+
+ds = ds.set_index('ts')
+
 plt.plot(ds.ro)
-plt.plot(ds.tk)
-plt.title('Medida de la resistencia y temperatura para un termoresistor.')
-plt.ylabel('Magnitud')
+plt.title('Medida del valor de la resistencia del termoresistor. (Segundo Set)')
+plt.ylabel('Resitencia (Ohms)')
 plt.xlabel('Tiempo (s)')
-plt.legend(['Resistencia (Ohms)','Temperatura (K)'],loc='upper left')
 plt.show()
-#No queda bien por la escala
+
+# Gráfica de Temperatura
+
+plt.plot(ds.tk)
+plt.title('Medida de la temperatura definida por el termoresistor. (Segundo Set)')
+plt.ylabel('Temperatura (K)')
+plt.xlabel('Tiempo (s)')
+plt.show()
+
+
+
+
+#SET 3
+
+# Gráfica Resistencia
+
+ds = pd.read_csv('https://raw.githubusercontent.com/jjavierf64/Proyectos_Instrumentacion/main/S11/datos_3.csv')
+
+print(ds.tail())
+
+ds = ds.set_index('ts')
+
+plt.plot(ds.ro)
+plt.title('Medida del valor de la resistencia del termoresistor. (Tercer Set)')
+plt.ylabel('Resitencia (Ohms)')
+plt.xlabel('Tiempo (s)')
+plt.show()
+
+# Gráfica de Temperatura
+
+plt.plot(ds.tk)
+plt.title('Medida de la temperatura definida por el termoresistor. (Tercer Set)')
+plt.ylabel('Temperatura (K)')
+plt.xlabel('Tiempo (s)')
+plt.show()
